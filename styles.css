@@ -1,0 +1,72 @@
+/* Pastikan body memiliki animasi latar yang berjalan */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    overflow-x: hidden; /* Hindari scroll horizontal */
+}
+
+/* Animasi latar belakang */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Kontainer utama dengan scroll */
+.container {
+    max-width: 100%; /* Pastikan responsif */
+    overflow-x: hidden; /* Hilangkan scroll horizontal */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Playlist Container */
+.playlist-container {
+    max-height: 180px; /* Batasi tinggi untuk 3 lagu */
+    overflow-y: auto; /* Scroll hanya jika konten melebihi tinggi */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* To-Do List */
+#todo-list {
+    max-height: 300px; /* Batasi tinggi untuk daftar tugas */
+    overflow-y: auto; /* Scroll jika melebihi batas */
+    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang transparan */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Gaya tombol */
+button {
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.modal-header {
+    background-color: #343a40;
+    color: #fff;
+}
+.modal-content {
+    border-radius: 10px;
+}
+button {
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    transform: scale(1.05);
+}
